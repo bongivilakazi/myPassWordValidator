@@ -1,11 +1,6 @@
-module.exports = {
-  passwordIsValid,
-  passwordIsOk,
-};
-
 function passwordIsValid(password) {
   try {
-    if (password == "") throw "password cannot be blank";
+    if (password == "") throw "password cannot be Empty";
     if (password.length <= 8)
       throw "password should be longer than 8 characters";
     if (password.match(/[a-z]/) == null)
