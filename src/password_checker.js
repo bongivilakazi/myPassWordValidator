@@ -39,8 +39,14 @@ function passwordIsOk(password0) {
   }
   return result;
 }
+
 console.log(passwordIsOk("SIBO@G=g97@$>"));
+
+function passWordStrength(password0) {
+  
+  
 module.exports = {
   passwordIsValid,
   passwordIsOk,
+  passWordStrength
 };
