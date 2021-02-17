@@ -41,8 +41,70 @@ function passwordIsOk(password0) {
 }
 
 console.log(passwordIsOk("SIBO@G=g97@$>"));
+function PassWordStrength(password){
+if password.contains(number){
+console.log("strong")
+}
+else return "weak";
+if password.contains(number){
+console.log("strong")
+}
+else return "medium"
+if password.contains(number){
+console.log("strong")
+}
+else return "weak"
 
-function passWordStrength(password0) {
+
+function checkVal()
+{
+	if (charPassword.length >= minPasswordLength)
+	{
+		baseScore = 50;	
+		analyzeString();	
+		calcComplexity();		
+	}
+	else
+	{
+		baseScore = 0;
+	}
+	
+	outputResult();
+}
+function analyzeString ()
+{	
+	for (i=0; i<charPassword.length;i++)
+	{
+		if (charPassword[i].match(/[A-Z]/g)) {num.Upper++;}
+		if (charPassword[i].match(/[0-9]/g)) {num.Numbers++;}
+		if (charPassword[i].match(/(.*[!,@,#,$,%,^,&,*,?,_,~])/)) {num.Symbols++;} 
+	}
+	
+	num.Excess = charPassword.length - minPasswordLength;
+	
+	if (num.Upper && num.Numbers && num.Symbols)
+	{
+		bonus.Combo = 25; 
+	}
+
+	else if ((num.Upper && num.Numbers) || (num.Upper && num.Symbols) || (num.Numbers && num.Symbols))
+	{
+		bonus.Combo = 15; 
+	}
+	
+	if (strPassword.match(/^[\sa-z]+$/))
+	{ 
+		bonus.FlatLower = -15;
+	}
+	
+	if (strPassword.match(/^[\s0-9]+$/))
+	{ 
+		bonus.FlatNumber = -35;
+	}
+}
+
+
+
   
   
 module.exports = {
